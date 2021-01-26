@@ -32,10 +32,10 @@ Login e senha dos usuários
 * login -> joaquim@teste.com.br ; senha-> 1234 ; nome-> Joaquim
 
 # Tecnologias empregadas
-PHP
-JavaScript
-Biblioteca Jquery
-Biblioteca Bootstrap
-Biblioteca FontAwesome
+* PHP
+* JavaScript
+* Biblioteca Jquery
+* Biblioteca Bootstrap
+* Biblioteca FontAwesome
 
 
