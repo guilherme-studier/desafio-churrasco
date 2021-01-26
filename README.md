@@ -26,6 +26,9 @@ Login e senha dos usuários
 ### Usuários administradores:
 * login -> adm@teste.com.br ; senha-> 1234 ; nome-> Admin
 * login -> user@teste.com.br ; senha-> 1234 ; nome-> User
+
+Logando como administrador, é possível visualizar quem está inscrito no evento, junto com os gastos gerais
+
 ### Usuários colaboradores:
 * login -> jose@teste.com.br ; senha-> 1234 ; nome-> José
 * login -> maria@teste.com.br ; senha-> 1234 ; nome-> Maria
