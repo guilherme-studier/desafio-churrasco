@@ -35,7 +35,7 @@ Logando como administrador, é possível visualizar quem está inscrito no event
 * login -> joaquim@teste.com.br ; senha-> 1234 ; nome-> Joaquim
 
 # Tecnologias empregadas
-* PHP
+* PHP 7.1
 * JavaScript
 * Biblioteca Jquery
 * Biblioteca Bootstrap
