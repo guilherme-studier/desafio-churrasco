@@ -130,7 +130,7 @@
     <title>Churrasco com o Grupo WL</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     
     <style>
@@ -166,7 +166,7 @@
 
     <div class="container">  
       <!-- formulario de cadastro no evento - exibirá se o usuário não tiver se inscrito ainda -->
-      <? if( !seUsuarioInscrito(pegarInscritos()) ){ ?> 
+      <?php if( !seUsuarioInscrito(pegarInscritos()) ){ ?> 
         <div class="card">
           <div class="card-header">
             Formulário de cadastro no evento
@@ -230,7 +230,7 @@
           </div>
         </div>
       <!-- se o usuário já se inscreveu, visualizar um card do seu cadastro -->
-      <? }else{ ?> 
+      <?php }else{ ?> 
         <div class="card">
           <div class="card-header">
             Você está inscrito no evento!
@@ -247,9 +247,9 @@
             <a class="text-danger" href="remover_inscricao.php?remover=<?=seUsuarioInscrito(pegarInscritos())[6]?>" rel="noopener noreferrer">Remover minha inscrição</a>
           </div>
         </div>
-      <? } ?> 
+      <?php } ?> 
       <!-- se o usuário é admin, visualizará uma tabela com os inscritos -->
-      <? if( seAdmin() ){ ?>
+      <?php if( seAdmin() ){ ?>
         <br />
         <br />
         <h5><b>Lista dos inscritos no evento:</b></h5>
@@ -266,7 +266,7 @@
           </thead>
           <tbody>
             <!-- foreach para percorrer os inscritos -->
-            <? foreach(pegarInscritos() as $index => $inscrito){ ?>
+            <?php foreach(pegarInscritos() as $index => $inscrito){ ?>
             <tr>
               <td><?= $inscrito[1] ?></td>
               <td><?= $inscrito[2] == 1 ? 'Sim' : 'Não' ?></td>
@@ -275,11 +275,11 @@
               <td>R$ <?= calcularValor($inscrito) ?></td>
               <td class="text-center"><a class="text-danger" href="remover_inscricao.php?remover=<?=$index+1?>" rel="noopener noreferrer"><i class="fa fa-times"></i></a></td>
             </tr>
-            <? } ?>
+            <?php } ?>
             <!-- se não houver inscritos, exibir esse texto -->
-            <? if(count(pegarInscritos()) == 0){ ?>
+            <?php if(count(pegarInscritos()) == 0){ ?>
             <td colspan="6" class="text-center">Não há inscritos no evento</td>
-            <? } ?>
+            <?php } ?>
             <!-- total gasto -->
             <tr style="background: #dedede;">
               <td colspan="4">Total gasto</td>
@@ -301,22 +301,22 @@
           </thead>
           <tbody>
             <!-- foreach para percorrer os inscritos -->
-            <? foreach(pegarConvidados() as $index => $convidado){ ?>
+            <?php foreach(pegarConvidados() as $index => $convidado){ ?>
             <tr>
               <td><?= $convidado[0] ?></td>
               <td><?= $convidado[1] ?></td>
             </tr>
-            <? } ?>
+            <?php } ?>
             <!-- se não houver convidados, exibir esse texto -->
-            <? if(count(pegarConvidados()) == 0){ ?>
+            <?php if(count(pegarConvidados()) == 0){ ?>
             <td colspan="6" class="text-center">Não há convidados no evento</td>
-            <? } ?>
+            <?php } ?>
             
           </tbody>
         </table>
         <br />
         <br />
-      <? } ?> 
+      <?php } ?> 
     </div>
     
 
